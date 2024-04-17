@@ -554,7 +554,7 @@ p {
   }
 
   .faction {
-    height: 30vh;
+    height: 40vh;
     aspect-ratio: 1/1.2;
     margin-bottom: 2rem;
     display: flex;
@@ -720,7 +720,7 @@ p {
 }
 
 .gallery__img--pa:hover {
-  transform: scale(1.2);
+  transform: scale(1.6);
 }
 
 .gallery__text {
