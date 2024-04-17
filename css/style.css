@@ -554,7 +554,7 @@ p {
   }
 
   .faction {
-    height: 10vh;
+    height: 30vh;
     aspect-ratio: 1/1.2;
     margin-bottom: 2rem;
     display: flex;
