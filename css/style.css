@@ -709,7 +709,7 @@ p {
 }
 
 .gallery__img {
-  width: 50vw;
+  width: 30vw;
   height: 50vh;
   transform-style: preserve-3d;
   animation: rotate 50s linear infinite;
