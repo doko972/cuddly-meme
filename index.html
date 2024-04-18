@@ -29,7 +29,13 @@
               <li><a href="athenaBronze.html">Bronze</a></li>
             </ul>
           </li>
-          <li><a href="poseidon.html">Poseidon</a></li>
+          <li>
+            <input type="checkbox" id="athena-toggle">
+            <a href="#">Poseidon</a>
+            <ul class="submenu">
+              <li><a href="generauxPoseidon.html">Marinas</a></li>
+            </ul>
+          </li>
           <li>
             <input type="checkbox" id="athena-toggle">
             <a href="#">Hades</a>
@@ -43,7 +49,6 @@
         </ul>
       </div>
     </nav>
-    
   </header>
   <div class="navbar-container__back txt-pos">
   </div>
@@ -78,24 +83,31 @@
   <article class="divinite">
     <div>
       <p class="p-max">
-        Cliquez sur le nom de votre divinité et choisissez !
+        Choisisez votre rôle!
       </p>
     </div>
     <div>
       <ul class="divinite__align">
         <li>
           <div class="faction athena">
-            <p><a href="athena.html">Athéna</a></p>
+            <ul class="menu__choose">
+              <li class="menu__choose--select"><p><a href="athenaGold.html">Or</a></p></li>
+              <li class="menu__choose--select"><p><a href="athenaSilver.html">Argent</a></p></li>
+              <li class="menu__choose--select"><p><a href="athenaBronze.html">Bronze</a></p></li>
+            </ul>
           </div>
         </li>
         <li>
-          <div class="faction poseidon">
-            <p><a href="poseidon.html">Poseïdon</a></p>
+          <div class="faction poseidon menu__choose--select">
+            <p><a href="generauxPoseidon.html">Généraux</a></p>
           </div>
         </li>
         <li>
           <div class="faction hades">
-            <p><a href="hades.html">Hadès</a></p>
+            <ul class="menu__choose">
+              <li class="menu__choose--select"><p><a href="hadesJuges.html">Juges</a></p></li>
+              <li class="menu__choose--select"><p><a href="hadesSpectres.html">Spectres</a></p></li>
+            </ul>
           </div>
         </li>
       </ul>

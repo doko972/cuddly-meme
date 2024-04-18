@@ -121,74 +121,7 @@ p {
 /*-----------------------------------*\
   #NAV
 \*-----------------------------------*/
-/* .navbar input[type="checkbox"],
-.navbar .hamburger-lines {
-  display: none;
-}
 
-.navbar {
-  background-color: var(--black-semi);
-  height: 4rem;
-  margin: 0;
-
-  z-index: 10;
-}
-
-@media screen and (min-width: 768px) {
-  .navbar {
-    background-size: 100%;
-    background-position: center;
-    background-image: url("../img/znav-bg.webp");
-    background-repeat: no-repeat;
-    background-position: 50% 80%;
-  }
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: center;
-  height: 4rem;
-  align-items: end;
-}
-
-.navbar-container__back {
-  background-image: url("../img/backathena.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 10%;
-  height: 20rem;
-  margin: 0;
-  z-index: 0;
-}
-
-.menu-items {
-  order: 2;
-  display: flex;
-}
-
-.menu-items li {
-  list-style: none;
-  margin-left: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.menu-items a {
-  text-decoration: none;
-  color: var(--aqua);
-  font-weight: 500;
-  transition: color 0.3s ease-in-out;
-  padding-bottom: 1rem;
-}
-
-.menu-items a:hover {
-  color: var(--purple);
-  transition: color 0.3s ease-in-out;
-  background-image: url("../img/znav-on.webp");
-  background-repeat: no-repeat;
-  background-position: 20% 100%;
-  padding-bottom: 1rem;
-} */
 /* Cache la case à cocher et les lignes du hamburger */
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
@@ -260,7 +193,7 @@ p {
   transition: color 0.3s ease-in-out;
   background-image: url("../img/znav-on.webp");
   background-repeat: no-repeat;
-  background-position: 20% 100%;
+  background-position: 10% 100%;
   padding-bottom: 1rem;
 }
 
@@ -268,16 +201,30 @@ p {
 .submenu {
   display: none;
   position: absolute;
-  top: 100%; /* Positionne le sous-menu en dessous de l'élément parent */
-  left: -30;
-  background-color: var(--black-semi); /* Couleur de fond */
-  padding: 10px; /* Espacement intérieur */
+  top: 100%;
+  left: -40;
+  background-color: var(--black-semi);
+  padding: 2rem;
+  z-index: 100;
 }
 
-/* Afficher le sous-menu lorsqu'on survole l'élément parent */
 .menu-items li:hover .submenu {
   display: block;
-  
+}
+.menu__choose{
+  display: flex;
+  flex-direction: column;
+}
+.menu__choose--select a{
+  color: var(--white);
+}
+.menu__choose--select:hover a{
+  color: var(--purple);
+  transition: color 0.3s ease-in-out;
+  background-image: url("../img/znav-on.webp");
+  background-repeat: no-repeat;
+  background-position: 10% 100%;
+  padding-bottom: 1rem;
 }
 
 .logo {
@@ -437,7 +384,7 @@ p {
 }
 
 .athena:hover {
-  background-color: var(--goldenstrong);
+  /* background-color: var(--goldenstrong); */
   color: var(--goldenstrong);
   transform: scale(1.2);
 }
@@ -460,7 +407,7 @@ p {
 }
 
 .poseidon:hover {
-  background-color: var(--bluesea);
+  /* background-color: var(--bluesea); */
   color: var(--white);
   transform: scale(1.2);
 }
@@ -483,7 +430,7 @@ p {
 }
 
 .hades:hover {
-  background-color: var(--purple);
+  /* background-color: var(--purple); */
   color: var(--white);
   transform: scale(1.2);
 }
@@ -798,14 +745,14 @@ p {
 }
 
 .gallery__title {
-  margin-top: 2rem;
+  margin: 2rem;
 }
 
-/* .gallery__img {
+.gallery__img {
   width: 30vw;
   height: 50vh;
   transform-style: preserve-3d;
-  animation: rotate 50s linear infinite;
+  animation: rotate 30s linear infinite;
 }
 
 .gallery__img--pa {
@@ -815,22 +762,12 @@ p {
 
 .gallery__img--pa:hover {
   transform: scale(1.6);
-} */
-.gallery__img {
-  width: 30vw;
-  height: 50vh;
-  transform-style: preserve-3d;
-  transform: rotateY(0deg); /* Ajout de cette ligne */
-}
-
-.gallery__img:hover {
-  animation-play-state: paused; /* Ajout de cette ligne pour arrêter l'animation au survol */
 }
 
 .gallery__img--pa {
   margin: 2rem;
   transition: transform .5s;
-}
+} */
 .gallery__text {
   padding: .5rem;
 
@@ -853,6 +790,21 @@ p {
   transform-origin: center;
   transform-style: preserve-3d;
   transform: rotateY(calc(var(--i) * 30deg)) translateZ(500px);
+}
+.gallery--one span{
+  transform: rotateY(calc(var(--i) * 0)) translateZ(0px);
+}
+.gallery--three span{
+  transform: rotateY(calc(var(--i) * 120deg)) translateZ(200px);
+}
+.gallery--five span{
+  transform: rotateY(calc(var(--i) * 72deg)) translateZ(200px);
+}
+.gallery--six span{
+  transform: rotateY(calc(var(--i) * 60deg)) translateZ(300px);
+}
+.gallery--heigth span{
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
 }
 
 .gallery span img {
@@ -886,7 +838,7 @@ p {
     width: 10vw;
     height: 80vh;
     transform-style: preserve-3d;
-    animation: rotate 50s linear infinite;
+    animation: rotate 20s linear infinite;
   }
 
   .gallery__img--pa {

@@ -1,4 +1,4 @@
-//Galerie//
+//Galerie just rotation//
 // const gallery = document.querySelector('.gallery__img');
 // let isDragging = false;
 // let lastX;
@@ -25,6 +25,7 @@
 //   }
 // });
 
+//Galery with stopping rotation//
 const gallery = document.querySelector('.gallery__img');
 let isMouseDown = false;
 let lastMouseX = 0;
