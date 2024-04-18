@@ -121,7 +121,7 @@ p {
 /*-----------------------------------*\
   #NAV
 \*-----------------------------------*/
-.navbar input[type="checkbox"],
+/* .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
   display: none;
 }
@@ -188,6 +188,96 @@ p {
   background-repeat: no-repeat;
   background-position: 20% 100%;
   padding-bottom: 1rem;
+} */
+/* Cache la case à cocher et les lignes du hamburger */
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+/* Styles de base de la barre de navigation */
+.navbar {
+  background-color: var(--black-semi);
+  height: 4rem;
+  margin: 0;
+  z-index: 10;
+}
+
+/* Styles pour les écrans larges */
+@media screen and (min-width: 768px) {
+  .navbar {
+    background-size: 100%;
+    background-position: center;
+    background-image: url("../img/znav-bg.webp");
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+  }
+}
+
+/* Conteneur de la barre de navigation */
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  align-items: end;
+}
+
+/* Styles pour l'arrière-plan */
+.navbar-container__back {
+  background-image: url("../img/backathena.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 10%;
+  height: 20rem;
+  margin: 0;
+  z-index: 0;
+}
+
+/* Styles pour les éléments du menu */
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  position: relative; /* Ajout d'une position relative pour les sous-menus */
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: var(--aqua);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  padding-bottom: 1rem;
+}
+
+.menu-items a:hover {
+  color: var(--purple);
+  transition: color 0.3s ease-in-out;
+  background-image: url("../img/znav-on.webp");
+  background-repeat: no-repeat;
+  background-position: 20% 100%;
+  padding-bottom: 1rem;
+}
+
+/* Styles pour les sous-menus */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positionne le sous-menu en dessous de l'élément parent */
+  left: -30;
+  background-color: var(--black-semi); /* Couleur de fond */
+  padding: 10px; /* Espacement intérieur */
+}
+
+/* Afficher le sous-menu lorsqu'on survole l'élément parent */
+.menu-items li:hover .submenu {
+  display: block;
+  
 }
 
 .logo {
@@ -711,7 +801,7 @@ p {
   margin-top: 2rem;
 }
 
-.gallery__img {
+/* .gallery__img {
   width: 30vw;
   height: 50vh;
   transform-style: preserve-3d;
@@ -725,8 +815,22 @@ p {
 
 .gallery__img--pa:hover {
   transform: scale(1.6);
+} */
+.gallery__img {
+  width: 30vw;
+  height: 50vh;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg); /* Ajout de cette ligne */
 }
 
+.gallery__img:hover {
+  animation-play-state: paused; /* Ajout de cette ligne pour arrêter l'animation au survol */
+}
+
+.gallery__img--pa {
+  margin: 2rem;
+  transition: transform .5s;
+}
 .gallery__text {
   padding: .5rem;
 
@@ -748,7 +852,7 @@ p {
   height: 100%;
   transform-origin: center;
   transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 33deg)) translateZ(380px);
+  transform: rotateY(calc(var(--i) * 30deg)) translateZ(500px);
 }
 
 .gallery span img {
@@ -800,3 +904,4 @@ p {
     padding: 1rem;
   }
 }
+
